@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Report</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles_report.css">
+</head>
+<body class="container">
+    <div class="card">
+        <div class="card-header text-center">
+            <h2>Monthly Report</h2>
+        </div>
+        <div class="card-body">
+            <div class="mb-4">
+                <label class="form-label">Filter by Date Range:</label>
+                <input type="date" id="startDate" class="form-control w-auto d-inline-block me-2">
+                <input type="date" id="endDate" class="form-control w-auto d-inline-block">
+                <button id="filterDates" class="btn btn-primary ms-2">Filter</button>
+                <label class="form-label ms-3">Filter by Category:</label>
+                <select id="categoryFilter" class="form-control w-auto d-inline-block">
+                    <option value="">All Categories</option>
+                    <option value="Supplies">Supplies</option>
+                    <option value="Equipment">Equipment</option>
+                    <option value="Utilities">Utilities</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <h3 class="mb-3">Expenses</h3>
+            <div class="card" id="expenseCard">
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Description</th>
+                                <th>Amount (Rs)</th>
+                                <th>Category</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="expenseTable"></tbody>
+                        <tfoot>
+                            <tr class="total-row">
+                                <td colspan="2">Total Expenses</td>
+                                <td id="totalExpenses">Rs0.00</td>
+                                <td colspan="2"></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+            <h3 class="mb-3">Stock Summary</h3>
+            <div class="card" id="stockCard">
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Stock Name</th>
+                                <th>Added Date</th>
+                                <th>Month</th>
+                                <th>New In</th>
+                                <th>Used Out</th>
+                                <th>Available</th>
+                                <th>Price per Piece (Rs)</th>
+                                <th>Total Value (Rs)</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="stockTable"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <h3 class="mb-3">Daily Stock Transactions</h3>
+            <div class="card" id="dailyStockCard">
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Stock Name</th>
+                                <th>Date</th>
+                                <th>Type</th>
+                                <th>Quantity</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dailyStockTable"></tbody>
+                    </table>
+                </div>
+            </div>
+            <a href="index.html" class="btn btn-secondary mt-3">Back to Home</a>
+        </div>
+    </div>
+    <script src="script_report.js"></script>
+</body>
+</html>

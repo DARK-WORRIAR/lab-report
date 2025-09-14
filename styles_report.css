@@ -1,0 +1,43 @@
+body {
+    background: linear-gradient(135deg, #e6f0fa, #ffffff);
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin-top: 20px;
+}
+
+.card {
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.card-header {
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px 8px 0 0;
+    padding: 10px;
+}
+
+.btn-primary {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-primary:hover {
+    background-color: #003d80;
+    border-color: #003d80;
+}
+
+.delete-btn, .edit-btn { cursor: pointer; margin-left: 10px; }
+.delete-btn { color: red; }
+.edit-btn { color: blue; }
+.total-row {
+    font-weight: bold;
+    background-color: #f8f9fa;
+}
